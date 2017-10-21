@@ -1,1 +1,1 @@
-My little game of life in React. Robert Axelrod's experiments with the Prisoner's dilemma.
+Showing off redux-saga to control app flow.
