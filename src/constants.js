@@ -1,1 +1,1 @@
-export const a = 8;
+export const HELLO_WORLD = 'HELLO_WORLD';
