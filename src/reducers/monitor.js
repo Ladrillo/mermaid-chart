@@ -1,15 +1,26 @@
+import * as c from '../constants';
+
 const defaultState = {
-    appStarted: false,
-    threadsStarted: false,
-    tokenFound: false,
-    loggedIn: false,
-    dbInitialized: false,
-    schemaMatches: false,
-    dbCreated: false,
-    periodicSyncStarted: false,
-    appDisplayed: false,
+  appStart: false,
+  threadsStart: false,
+  tokenFind: false,
+  loggedIn: false,
+  dbInitialize: false,
+  schemaMatch: false,
+  dbCreate: false,
+  periodicSyncStart: false,
+  appDisplay: false,
 };
 
 export default function monitor(state = defaultState, action) {
-  return state;
+  switch (action.type) {
+    case c.SUCCESS:
+      return { ...state, [action.payload]: true };
+
+    case c.FAILURE:
+      return { ...state, [action.payload]: false };
+
+    default:
+      return state;
+  }
 }

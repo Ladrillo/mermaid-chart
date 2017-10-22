@@ -9,7 +9,7 @@ color: #333;
 .node circle,
 .node ellipse,
 .node polygon {
-fill: #cde498;
+fill: red;
 stroke: #13540c;
 stroke-width: 1px;
 }
@@ -354,6 +354,15 @@ z-index: 100;
 
 color: rgba(0, 0, 0, 0.65);
 font: normal normal normal normal 12px / 18px "Helvetica Neue For Number", -apple-system, system-ui, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+#appStart {
+  fill: ${pr => pr.monitor.appStart ? 'green' : 'red'}
+}
+
+#threadsStart {
+  fill: ${pr => pr.monitor.threadsStart ? 'green' : 'red'}  
+}
+
 `;
 
 export default Styled;
