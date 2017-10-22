@@ -2,6 +2,7 @@
 export const START_APP = 'START_APP';
 export const START_APP_IN_PROGRESS = 'START_APP/IN_PROGRESS';
 export const START_THREADS_IN_PROGRESS = 'START_THREADS_IN_PROGRESS';
+export const TOKEN_FIND_IN_PROGRESS = 'TOKEN_FIND_IN_PROGRESS';
 
 // monitor
 export const appStart = 'appStart';
@@ -30,3 +31,7 @@ export const stage = {
 export const SETUP = 'SETUP';
 export const SUCCESS = 'SUCCESS';
 export const FAILURE = 'FAILURE';
+
+// misc
+export const REDIRECT_TO_LOGIN = 'REDIRECT_TO_LOGIN';
+export const LEAVE_LOGIN = 'LEAVE_LOGIN';

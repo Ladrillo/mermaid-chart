@@ -11,3 +11,12 @@ export const setup = (key, val) => ({
     key, val
   }
 });
+
+export const success = (key) => ({
+  type: c.SUCCESS,
+  payload: key,
+});
+
+export const leaveLogin = () => ({
+  type: c.LEAVE_LOGIN
+});

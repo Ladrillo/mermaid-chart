@@ -31,6 +31,12 @@ const Styled = styled.div`
 
 
 export class App extends Component {
+  loginHandler() {
+    this.props.leaveLogin();
+    this.props.success('tokenFind');
+    this.props.success('loggedIn');
+  }
+
   render() {
     return (
       <Styled>
@@ -54,6 +60,12 @@ export class App extends Component {
                   }
                 </div>
               ))
+            }
+          </div>
+          <div className='loginScreen'>
+            {
+              this.props.loginVisible &&
+              <button onClick={this.loginHandler}><h2>LOGIN</h2></button>
             }
           </div>
         </div>

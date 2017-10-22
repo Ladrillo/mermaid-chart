@@ -94,7 +94,7 @@ export class Chart extends React.Component {
                 </g>
               </g>
               <g className="node" id="C" style={{ "opacity": "1" }} transform="translate(221.75390625,291.671875)">
-                <polygon points="72.28125,0 144.5625,-72.28125 72.28125,-144.5625 0,-72.28125" rx="5" ry="5" transform="translate(-72.28125,72.28125)" />
+                <polygon id='tokenFind' points="72.28125,0 144.5625,-72.28125 72.28125,-144.5625 0,-72.28125" rx="5" ry="5" transform="translate(-72.28125,72.28125)" />
                 <g className="label" transform="translate(0,0)">
                   <g transform="translate(-60.453125,-9.8984375)" />
                 </g>

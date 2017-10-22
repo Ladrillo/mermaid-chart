@@ -16,6 +16,7 @@ function* appStart(action) {
 
   if (isSuccessful) {
     yield put({ type: c.SUCCESS, payload: c.stage.appStart });
+    return true;
   }
 
   else {
@@ -40,10 +41,41 @@ function* threadsStart(action) {
   }
 }
 
+function* tokenFind(action) {
+  yield put({ type: c.TOKEN_FIND_IN_PROGRESS });
+  
+    const isSuccessful = yield call(async, c.stage.tokenFind);
+  
+    if (isSuccessful) {
+      yield put({ type: c.SUCCESS, payload: c.stage.tokenFind });
+      return true;
+    }
+  
+    else {
+      yield put({ type: c.FAILURE, payload: c.stage.tokenFind });
+    }
+}
+
+function* loggedIn(action) {
+  
+}
 
 function* main(action) {
-  const result = yield call(appStart);
-  const meh = yield call(threadsStart);
+  var started = yield call(appStart);
+
+  if (started) {
+    var threadsStarted = yield call(threadsStart);
+  }
+
+  if (threadsStarted) {
+    var tokenFound = yield call(tokenFind);
+  }
+
+  if (tokenFound) {
+    yield true;
+  } else {
+    yield false;
+  }
 }
 
 export function watchStartApp() {

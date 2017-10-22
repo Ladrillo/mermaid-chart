@@ -363,6 +363,10 @@ font: normal normal normal normal 12px / 18px "Helvetica Neue For Number", -appl
   fill: ${pr => pr.monitor.threadsStart ? 'green' : 'red'}  
 }
 
+#tokenFind {
+  fill: ${pr => pr.monitor.tokenFind ? 'green' : 'red'}  
+}
+
 `;
 
 export default Styled;
