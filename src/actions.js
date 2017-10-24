@@ -17,6 +17,14 @@ export const success = (key) => ({
   payload: key,
 });
 
-export const leaveLogin = () => ({
-  type: c.LEAVE_LOGIN
+export const hideLogin = () => ({
+  type: c.HIDE_LOGIN,
+});
+
+export const setToken = () => {
+  return changeSetup(c.stage.tokenFind, 'yeah');
+};
+
+export const findToken = () => ({
+  type: c.TOKEN_FIND,
 });

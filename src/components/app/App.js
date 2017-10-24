@@ -31,10 +31,10 @@ const Styled = styled.div`
 
 
 export class App extends Component {
-  loginHandler() {
-    this.props.leaveLogin();
-    this.props.success('tokenFind');
-    this.props.success('loggedIn');
+  loginHandler = () => {
+    this.props.setToken();
+    this.props.hideLogin();
+    this.props.findToken();
   }
 
   render() {
