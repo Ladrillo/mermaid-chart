@@ -1,8 +1,18 @@
 // action types
 export const START_APP = 'START_APP';
 export const START_APP_IN_PROGRESS = 'START_APP/IN_PROGRESS';
+
+export const START_THREADS = 'START_THREADS';
 export const START_THREADS_IN_PROGRESS = 'START_THREADS_IN_PROGRESS';
+
 export const TOKEN_FIND_IN_PROGRESS = 'TOKEN_FIND_IN_PROGRESS';
+export const TOKEN_FIND = 'TOKEN_FIND';
+
+export const SHOW_LOGIN = 'SHOW_LOGIN';
+export const HIDE_LOGIN = 'HIDE_LOGIN';
+
+export const INIT_DB_IN_PROGRESS = 'INIT_DB_IN_PROGRESS';
+export const DB_INIT = 'DB_INIT';
 
 // monitor
 export const appStart = 'appStart';

@@ -3,7 +3,7 @@ import * as c from '../constants';
 const defaultState = {
   appStartAllowed: true,
   threadsStartAllowed: true,
-  tokenFindAllowed: true,
+  tokenFindAllowed: false,
   loggedInAllowed: true,
   dbInitializeAllowed: true,
   schemaMatchAllowed: true,

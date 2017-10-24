@@ -4,10 +4,10 @@ const defaultState = false;
 
 export default function loginVisible(state = defaultState, action) {
   switch (action.type) {
-    case c.REDIRECT_TO_LOGIN:
+    case c.SHOW_LOGIN:
       return true;
 
-    case c.LEAVE_LOGIN:
+    case c.HIDE_LOGIN:
       return false;
 
     default:
